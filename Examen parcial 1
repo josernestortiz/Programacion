@@ -1,0 +1,33 @@
+// considerandodosnumeros.cpp : Defines the entry point for the console application.
+// Autor:Jose Ernesto Ortiz
+// Fecha: 25/03/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+
+using namespace std;
+void main()
+
+
+{
+	int numero1, numero2, res;
+	cout<<"                       Calculo de dos numeros \n\n";
+	cout<<"ingrese numero1:";
+	cin>>numero1;
+	cout<<"ingrese numero2:";
+	cin>>numero2;
+	if ((numero1%2==0)
+		&&(numero1+numero2==0))
+		res=numero1+numero2;
+	else
+		res=numero1*numero2;
+    cout<<"respuesta:";
+	cout<<res;
+	getch();
+
+
+}
+
