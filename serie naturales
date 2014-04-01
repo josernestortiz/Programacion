@@ -1,0 +1,27 @@
+// serienaturales.cpp : Defines the entry point for the console application.
+// Autor:Jose Ernesto Ortiz Ortuño
+// Fecha:01/03/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+	int suma, i,N;
+	cout<< "ingrese el valor de N:";
+	cin>> N;
+	suma=0;
+	cout<<"\n\suma=";
+	for (i=1;i<=N;i=i+2)
+    {
+		cout<<i<<"+";
+		suma=suma+i;
+    }
+	cout<< " la suma de los " <<N<< " primeros numeros inpares naturales enteros es: " << suma;
+	getch();
+	return 0;
+}
+
