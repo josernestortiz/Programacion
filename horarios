@@ -1,0 +1,52 @@
+// Horarios.cpp : Defines the entry point for the console application.
+//Autor: Jose Ernesto Ortiz
+//fecha: 06/05/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+
+void main()
+{
+	int h1,m1,s1,h2,m2,s2;
+
+	cout<<"ingrese la 1ra hora:";
+	cout<<"hora:";
+	cin>>h1;
+	cout<<"minutos:";
+	cin>>m1;
+	cout<<"segundos:";
+	cin>>s1;
+	cout<<"ingrese la 2da hora:";
+	cout<<"hora:";
+	cin>>h2;
+	cout<<"minutos:";
+	cin>>m2;
+	cout<<"segundos:";
+	cin>>s2;
+
+	s1=s1+s2;
+	if(s1>=60)
+	{
+	m1=m1+1;
+	s1=s1-60;
+	}
+	m1=m1+m2;
+	if(m1>=60)
+	{
+	h1=h1+1;
+	m1=m1-60;
+	}
+	h1=h1+h2;
+	if(h1>=24)
+	{
+	h1=h1-24;
+	}
+	cout<< "el horario final es:";
+	cout<< h1<<":"<<m1<<":"<<s1;
+	getch();
+}
+
