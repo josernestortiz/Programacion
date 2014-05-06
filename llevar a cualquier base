@@ -1,0 +1,36 @@
+// llevar a cualquier base.cpp : Defines the entry point for the console application.
+//Autor:Jose Ernesto Ortiz
+//Fecha:06/05/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+void main()
+{
+int n,r,d,s;
+float i;
+cout<<"ingrese el n:";
+cin>>n;
+cout<<"ingrese el el valor de la base:";
+cin>>r;
+s=0;
+i=0;
+while(n>0)
+{
+	d=n%10;
+	n=n/10;
+	s=s+d*pow(r,i);
+	i=i+1;
+}
+cout<<"el valor valor del numero en base decimal es:";
+cout<<s;
+
+
+getch();
+
+	
+}
+
