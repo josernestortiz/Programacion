@@ -1,0 +1,44 @@
+//  Ejercicio combinatoria.cpp : Defines the entry point for the console application.
+// Autor :Jose Ernesto Ortiz
+// Fecha :13/05/14
+
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h"
+
+using namespace std;
+int factorial (int numero);
+float potencia (float base, int exponente);
+void main()
+
+{
+int x,n,i;
+float suma;
+cout<<"ingrese el valor de x: ";
+cin>>x;
+cout<<"ingrese el valor de n: ";
+cin>>n;
+suma=0;
+for (i=1;i<=n;i++)
+    suma=suma+potencia (x,i)/factorial(i);
+
+cout<<"El valor de la suma es: "<<suma;
+
+ getch();
+}
+int factorial (int numero)
+    {
+	int fact=1;
+	for(int i=1;i<=numero;i++)
+		fact=fact*i;
+	return fact;
+    }
+float potencia (float base, int exponente)
+
+    {
+	float pot=1;
+	for(int i=1;i=exponente;i++)
+		pot=pot*base;
+
+	return pot;
+    }
