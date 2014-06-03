@@ -1,0 +1,69 @@
+// volumen del lodo.cpp : Defines the entry point for the console application.
+//Grupo: Tecnoupsa
+//alumnos: Jose Ernesto Ortiz, Jorge Andrez Arduz Hoyos y Hugo Ortiz
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+
+using namespace std;
+
+
+void main()
+{
+	system("color 3f");
+	int cantCa; // Aqui se almacenara la cantidad de casing
+	int co; // este contador controlara nuestro while
+	double d1; // el primer diametro
+	double d2; // el segundo diametro
+	double dmay; // aqui se almacenara el diametro mayor
+	double dmen; // aqui se almacenara el diametro menor
+	double longitud; // aqui se almacenara la longitud del casing
+	double vol; // aqui se iran almacenando los volumenes
+	double vt; // aqui se almacenara el volumen total
+	double bolsas; // aqui guardamos el valor de la cantidad de bolsas
+	cout << "***BIENVENIDO AL PROGRAMA QUE CALCULA EL VOLUMEN DEL LODO***" << endl;
+	cout << endl;
+	cout << "Por favor indique con cuantos casing esta trabajando: ";
+	cin >> cantCa;
+	cout << endl;
+	
+	co = 1; // iniciamos el contador en 0
+	vt = 0; // iniciamos el volumen total en 0
+	while (co <= cantCa)
+	{
+		
+		cout << "Ingrese el primer diametro del casing N" << co <<": ";
+		cin >> d1;
+		dmay = d1; // el primer diametro sera el diametro mayor
+		cout << "Ingrese el segundo diametro del casing N" << co <<": ";
+		cin >> d2;
+		if(d2 > dmay) //si d2 es MAYOR que dmay
+		{
+			dmay = d2; // el nuevo dmay sera de
+			dmen = d1; // y dmen sera d1
+		}
+		else // caso contrario
+		{
+			dmen = d2; // dmay se queda con el valor de d1 y dmen sera d2
+		}
+		// *** hasta aqui ya sabemos cual de los dos diametros es el mayor y el menor
+		cout << "Ingrese la longitud del casing N" << co <<": ";
+		cin >> longitud;		
+
+		vol = ((pow(dmay,2) - pow(dmen,2))/1029) * longitud; // aqui calcula la formula
+		vt = vt + vol; // va sumando los valores de vol para obtener el volumen total
+		cout << "\n";
+		co = co +1;
+	}
+
+	bolsas = vt / 8;
+	cout << "La cantidad de bolsas en total es: " << bolsas;
+	_getch();
+}
+
+
+
