@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------------------------------------------------------------------------
+Programa:   hola.cppl
+Vercion:    V1
+Fecha:      7/7/14
+Autor:      Jose Ernesto Ortiz
+Obs:        Manda un saludo
+Funciones:
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h" //funciones basicas del Exp.Ed
+#include "conio.h" //manejo de ocnsola
+#include "stdlib.h" //para llamar al S.O.Windows
+#include "stdio.h" //estadar Ipu Output
+
+
+ void main ()
+ {char nom[15], apell[15];
+ int a,b,suma;
+ printf("\n ingrese su nombre: ");
+ scanf("%s",&nom);
+ printf("\n ingrese su apellido: ");
+ scanf("%s", &apell);
+ printf("\ningrese un numero: ");
+ scanf("%d", &a);
+ printf("\ningrese un numero: ");
+ scanf("%d", &b);
+ printf("\n Hola %s  %s\n\n",nom,apell); //toda instrucion termina en ;
+ suma=a+b;
+ printf("\n La suma de %d +%d = %d",a,b,suma);
+
+ printf("\n\n");
+ system("pause");
+
+	
+}
+
