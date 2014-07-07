@@ -18,8 +18,8 @@ printf("\n\n\t ingrese el radio del circulo: ");
 scanf("%f",&rd);
 ar=pi*rd*rd;
 per=pi*2*rd;
-printf("\n el area del circulo es: %f",ar);
-printf("\n el perimetro del circulo: es %f\n\n",per);
+printf("\n el area del circulo es: %5.2f",ar);
+printf("\n el perimetro del circulo: es %5.2f\n\n",per);
 system("pause");
 	
 }
