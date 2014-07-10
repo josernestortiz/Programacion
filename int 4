@@ -1,0 +1,38 @@
+Enter file contents here/*------------------------------------------------------------------------------------------------------------------------
+programa:     hora.cpp 
+-------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+
+void main()
+{int h1,h2,m,s;
+int cont;
+do
+{printf("\n ingrese la hora [hh]");
+scanf("%d",&h1);
+}while(h1 <= 0|| h1 > 23);
+do
+{printf("\n ingrese el minuto [mm]);
+ scanf("%d",&m);
+}while(m < 0 || m > 59);
+do
+{printf("\n ingrese el segundo [ss]);
+ scanf("%d",&s);
+}while(s < 0 || s > 59);
+if (h1>12)
+   {h2 = h1 - 12);
+   printf("la hora es %d - %d - %d pm",h2,m,s);
+   }
+else
+    {if (h1 == 12)
+    printf("la hora es %d - %d - %d pm",h1,m,s);
+    }
+    else
+    {printf("la hora es %d - %d - %d am",h2,m,s);
+    }
+}
+
