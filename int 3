@@ -1,0 +1,39 @@
+Enter file contents hereVersion:     V1
+Fecha:       10/7/14
+Autor:       Jose Ernesto Ortiz
+Obs:         _Ingresando el diametro calcule la circunferencia, area y volumen
+-------------------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+#define pi 3.14159
+
+
+void main()
+{float per,ar,vol,d;
+int cont;
+do
+{
+do
+  {printf("\n ingrese en diametro [d > o]:");
+  scanf("%f",&d);
+  }while (d <= 0);
+per = pi*d;
+ar = pi*d*d;
+vol = pi*d*d*d/6;
+printf("\n el perimetro es %6.2f",per);
+printf("\n el area es %6.2f",ar);
+printf("\n el volumetro es %6.2f",vol);
+printf("desea continuar? [1=si]");
+scanf("%d",&cont);
+
+}while(cont==1);
+
+
+
+}
+
+
