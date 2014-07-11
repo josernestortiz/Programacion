@@ -1,0 +1,37 @@
+Enter file contents here/*-----------------------------------------------------------------------------------------------------------------------------------
+Programa:     segundos
+----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "math.h"
+
+
+
+void main()
+{int h,m,s,so,cont;
+do
+{system("cls");system("color f5");
+   do
+  {printf("\n\n ingrese los segundos : ");
+   scanf("%d",&s);
+  }while(s<=0);
+  h=s/3600;
+  s=s%3600;
+  m=s/60;
+  s=s%60;
+  printf("\n\nlos  %d segundos dan",so);
+  printf("\n\n %d horas %d minutos %d segundos",h,m,s);
+  
+	  
+
+  
+  
+  printf("\n\n desea continuar [1=si]" );
+  scanf("%d",&cont);
+  }while (cont==1);
+}
+
+ 
